@@ -41,7 +41,7 @@
 {
     CDVPluginResult* pluginResult;
     @try {
-        if([CLLocationManager locationServicesEnabled] && [self isLocationAuthorized]) {
+        if([CLLocationManager locationServicesEnabled]) { //&& [self isLocationAuthorized]) {
             NSLog(@"Location is enabled.");
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsInt:1];
         }
